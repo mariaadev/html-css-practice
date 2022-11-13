@@ -5,63 +5,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L Lawliet Portfolio</title>
+    <title>Lawliet Porfolio</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1> L Lawliet Porfolio</h1>
+    <header class="header">
+
+        <nav class="nav-bar">
+            <div>
+            <ul class="menu">
+                <li>
+                    <a class="about" href="#about"> About me</a>
+                </li>
+                <li>
+                    <a class="skills" href="#skills"> Skillset</a>
+                </li>
+                <li>
+                    <a class="contact" href="#contact"> Contact</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+
+        <section class="container">
+            <div class="column">
+                <h1> "L" aka Lawliet </h1>
+            </div>
+        </section>
+
     </header>
     <main>
-        <section>
-            <h2> "L" Lawliet</h2>
-            <p></p>
+        <section class="about" id="about">
+            <h2>About</h2>
+            <p> My name is Lawliet but I am known as "L". I am a detective who takes on the challenge of catching the
+                mass murderer known as Kira. Besides being a detective, my main hobbies are gaming, playing tennis, and puzzles.
+                I've never been able to make any friend due to my job but who knows, maybe some day...
+            </p>
         </section>
-        <section>
-            <h2> My Skills</h2>
+        <section class="skills" id="skills">
+            <h2>My skills</h2>
             <div class="wrapper">
-                <div class="content">
-                    <h3>Quick Thinking</h3>
-                    <div class="loading-bar">
-                        <span></span>
+                <div class="container">
+                    <h3>Intelligence</h3>
+                    <div class="progress-bar">
+                        <div class="intelligence">
+                        </div>
                     </div>
+                </div>
+                <div class="container">
                     <h3>Mental Strength</h3>
-                    <div class="loading-bar">
-                        <span></span>
+                    <div class="progress-bar">
+                        <div class="mental-strength">
+                        </div>
                     </div>
-                    <h3>Social Skills</h3>
-                    <div class="loading-bar">
-                        <span></span>
+                </div>
+                <div class="container">
+                    <h3>Social skills</h3>
+                    <div class="progress-bar">
+                        <div class="social-skills">
+                        </div>
                     </div>
+                </div>
+                <div class="container">
                     <h3>Athletic</h3>
-                    <div class="loading-bar">
-                        <span></span>
+                    <div class="progress-bar">
+                        <div class="athletic">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <div>
-            <form action="register.html">
+        <section class="contact" id="contact">
+            <div>
                 <fieldset>
-                    <div>
-                        <label for="name">Name</label>
+                    <div class="form-item">
+                        <label for="name" required>Name required</label>
                         <input type="text" id="name" placeholder="Introduce your name">
                     </div>
-                    <div>
-                        <label for="surname">Surname</label>
+                    <div class="form-item">
+                        <label for="surname" required>Surname</label>
                         <input type="phone-number" id="surname" placeholder="Introduce your surname">
                     </div>
-                    <div>
-                        <label for="phone-number">Phone number</label>
+                    <div class="form-item">
+                        <label for="phone-number" required>Phone number</label>
                         <input type="tel" id="phone-number" placeholder="Phone number">
                     </div>
-                    <div>
-                        <label for="github-username">Github Username</label>
-                        <input type="text" id="github-username" placeholder="github username (@&lt;username&gt;)" pattern="">
+                    <div class="form-item">
+                        <label for="github-username" required pattern="^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$">Github
+                            Username</label>
+                        <input type="text" id="github-username" placeholder="github username (@&lt;username&gt;)"
+                            pattern="">
                     </div>
                 </fieldset>
+
                 <fieldset>
                     <legend>How we met?</legend>
                     <div>
@@ -83,14 +121,25 @@
 
                 </fieldset>
 
-                <label for="more-info" >More information</label>
-                <input type="text" id="more-info" placeholder="What else do you wanna know?">
+                <label for="more-info">More information</label>
+                <input type="text" id="more-info" maxlength="180" placeholder="What else do you wanna know?">
 
                 <button type="submit">Submit</button>
 
-            </form>
-        </div>
+                </form>
+            </div>
+        </section>
     </main>
+    <footer class="footer"">
+        <div class=" footer-container">
+        <a href="https://github.com/mariaadev">
+            <img src="/images/github-logo.png" alt="logo-github">
+        </a>
+        <a href="https://es.linkedin.com/in/maria-amzil-915658157">
+            <img src="/images/linkedin.png" alt="logo-linkedin">
+        </a>
+        </div>
+    </footer>
 </body>
 
 </html>
